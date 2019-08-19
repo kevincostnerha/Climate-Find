@@ -16,4 +16,5 @@ Help fight against climate change by adopting a more greener lifestyle.
 
 # 5. User is able to access a tracker to keep tabs on their progress.
 Incorporated a karma system to motivate user.
+
 <img src ="https://i.imgur.com/EWhaXmr.png" width="350"/>
