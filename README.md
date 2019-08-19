@@ -3,6 +3,7 @@ Help fight against climate change by adopting a more greener lifestyle.
 
 ## Installation
 Before you can run this program, you will need to:
+
     1. go get golang.org/x/crypto/bcrypt
     
     2. go get github.com/go-sql-driver/mysql
