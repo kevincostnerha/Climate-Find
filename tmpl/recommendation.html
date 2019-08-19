@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{{ template "head.html" }}
+</head>
+
+<body>
+	{{ template "navbar.html" }}
+
+	<div class="jumbotron">
+			<h1 class="display-4">Based on your survey results:</h1>
+			<p class="lead">You should focus on {{.Recommendation}} to have the greatest impact.</p>
+			<form><a class="btn btn-primary" href="/trackers" role="button">Continue to select activity trackers</a></form>
+	</div>
+
+
+
+
+</body>
+
+
+	<!-- Script files -->
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{{ template "head.html" }}
+</head>
+
+<body>
+	<!-- Navigation Bar -->
+	{{ template "navbar.html" }}
+	<h1>Add Activity Trackers</h1>
+	
+	<div class="btn-group mx-sm-3 mb-2">
+		{{$AllActs := .AllActs}}
+		{{range .AllGoals}}
+		{{$GID := .GoalID}}
+		<form action="/addActivity" method="POST">
+			<span class = "ml-2 mr-2 mb-3">{{.GoalName}} : 
+				<select class="form-control form-control-sm mx-sm-3 mb-2"name="addAct">
+					{{range $AllActs}}
+					{{if eq .GoalID $GID}} <option  value="{{.Activity}}">{{.Activity}}</option> {{end}}
+					{{end}}
+				</select>
+			</span>
+			
+			<button class="btn btn-primary btn-sm ml-2 mr-2 mb-3" type="submit" id="btn">Add</button>
+		</form>
+		{{end}}
+	</div>
+</div>
+
+<h1>Current Activity Trackers</h1>
+
+<table class="table table-striped">
+{{range .UserActs}}
+<form action="/doActivity" method="POST">
+	<input type="hidden" name="doAct" value="{{.Activity}}"/>
+
+		<thead>
+			<tr>
+				<th scope="col">Activity</th>
+				<th scope="col">Description</th>
+				<th scope="col">Activity Karma</th>
+				<th scope="col">Total Karma</th>
+			</tr>
+		</thead>
+		<tbody>
+			
+			<tr>
+				<td>{{.GoalName}}</td>
+				<td>{{.Activity}}</td>
+				<td>{{.IndivKarma}}</td>
+				<td>{{.SumKarma}}</td>
+				<td><button class="btn btn-primary" type="submit" id="btn">Gimme karma!</button></td>
+			</tr>
+		</tbody>
+	</table>
+</form>
+{{end}}
+</body>
+
+</html>

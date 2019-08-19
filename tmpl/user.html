@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{ template "head.html" }}
+</head>
+
+<body>
+	<!-- Navigation Bar -->
+
+	{{ template "navbar.html" }}
+    <h1>Welcome to your account!</h1>
+
+    <!-- implement logout function here -->
+    <!-- this makeshift solution of leading you back to the index page works for now since the program doesn't keep you signed in currently-->
+    <form action="/logout" method="POST">
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>

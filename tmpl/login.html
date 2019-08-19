@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{{ template "head.html" }}
+    <title>ClimateFind</title>
+</head>
+<body>
+        <div class="jumbotron">
+                <h1 class="display-4">Welcome to Climate Find</h1>
+        </div>
+        <div class="form-row align-items-center"> 
+            <form action="/login" method="POST">
+                <div class="form-group ml-2 mr-2 mb-3">
+                    <label for="uname">User Name</label>
+                    <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter User Name" required>
+                </div>
+                <div class="form-group ml-2 mr-2 mb-3">
+                    <label for="pw">Password</label>
+                    <input type="password" name="password"class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <a class="link" href="/signup">Create Account</a>
+            </form>
+        </div>
+</body>
+</html>

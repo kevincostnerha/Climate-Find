@@ -1,0 +1,69 @@
+<!--https://stackoverflow.com/questions/45328763/displaying-a-message-->
+<!-- provided the base work for the code i am presenting here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{ template "head.html" }}
+</head>
+
+<body>
+	<!-- necessary to run jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="/static/ex.js"></script>
+
+
+
+	{{ template "navbar.html" }}
+	
+	<h1 class="title" id="createtitle">Climate Awareness Survey</h1>
+	
+	<form action="/recommendation" method="POST">
+	<table>
+	<tr>
+    	<td>
+	        <h2>1. How would you describe your diet?</h2>
+	        <p><input class="calc" type="radio" name="r1" id="v1" value="1"> Vegan </p>   
+	        <p><input class="calc" type="radio" name="r1" id="v1" value="5"> Vegetarian </p>
+	        <p><input class="calc" type="radio" name="r1" id="v1" value="10"> Whatever's on my plate?</p>  
+		</td>
+	</tr>
+
+    <tr>
+    	<td>
+    		<h2>2. What is your primary method of transportation?</h2>
+            <p><input class="calc" type="radio" name="r2" id="v2" value="1"> Bike</p> 
+            <p><input class="calc" type="radio" name="r2" id="v2" value="5"> Public Transportation</p> 
+            <p><input class="calc" type="radio" name="r2" id="v2" value="6"> Carpool </p>   
+            <p><input class="calc" type="radio" name="r2" id="v2" value="200"> Private Vehicle</p> 
+		</td>
+	</tr>
+	
+    <tr>
+		<td>
+			<h2>3. What is your water conservation level?</h2>
+            <p><input class="calc" type="radio" name="r3" id="v3" value="1"> Strict Conservation</p>
+            <p><input class="calc" type="radio" name="r3" id="v3" value="5"> Mild Conservation</p>
+            <p><input class="calc" type="radio" name="r3" id="v3" value="400"> Unrestricted Use</p>
+        </td>
+    </tr>
+
+
+    <tr>
+		<td>
+			<h2>4. Describe the amount of electricity you use on a daily basis?</h2>
+            <p><input class="calc" type="radio" name="r4" id="v4" value="1"> "Strict Conservation"</p>   
+            <p><input class="calc" type="radio" name="r4" id="v4" value="5"> "Mild Conservation"</p>
+            <p><input class="calc" type="radio" name="r4" id="v4" value="10000"> "Unrestricted Use"</p>
+        </td>
+    </tr>
+
+
+	</table>
+	<button class="btn btn-primary" type="submit" id="btn" value="Process Survey">Submit Survey</button>
+
+	</form>
+
+	<p id="demo"></p>
+
+</body>
+</html>
